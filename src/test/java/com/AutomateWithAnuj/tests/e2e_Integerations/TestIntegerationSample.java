@@ -1,8 +1,7 @@
-package com.AutomateWithAnuj.tests.endtoendIntegeration;
+package com.AutomateWithAnuj.tests.e2e_Integerations;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import io.qameta.allure.testng.Tag;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

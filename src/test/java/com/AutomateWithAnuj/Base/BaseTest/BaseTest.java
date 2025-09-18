@@ -1,4 +1,4 @@
-package com.AutomateWithAnuj.tests.BaseTest;
+package com.AutomateWithAnuj.Base.BaseTest;
 
 public class BaseTest {
     // CommonToAll Testcase
