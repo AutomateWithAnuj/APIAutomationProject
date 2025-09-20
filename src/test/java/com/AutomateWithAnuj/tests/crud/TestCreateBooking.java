@@ -39,7 +39,7 @@ public class TestCreateBooking extends BaseTest {
     public void testCreateBookingPOST_POSITIVE_ChineseChars(){
         //Setup and Making a Request
         requestSpecification.basePath(APIConstants.CREATE_UPDATE_BOOKING_URL);
-        response = RestAssured.given(requestSpecification).when().body(payloadManager.createPayloadBookingAsStringWrong()).post();
+        response = RestAssured.given(requestSpecification).when().body(payloadManager.createPayloadBookingAsStringChinese()).post();
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
     }

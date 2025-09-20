@@ -32,7 +32,7 @@ public class PayloadManager {
         return jsonStringBooking;
     }
 
-    public String createPayloadBookingAsStringWrong() {
+    public String createPayloadBookingAsStringChinese() {
         Booking booking = new Booking();
         booking.setFirstname("王伟"); //this payload can be changed and get from excel file as well
         booking.setLastname("李娜");
@@ -97,7 +97,12 @@ public class PayloadManager {
         Gson gson = new Gson();
         String jsonStringBooking = gson.toJson(booking);
         return jsonStringBooking;
-    }
 
+    }
+    public Object createPayloadBookingAsObject2(String responseString) {
+        Gson gson = new Gson();
+        Booking booking = gson.fromJson(responseString, Booking.class);
+        return booking;
+    }
 
 }

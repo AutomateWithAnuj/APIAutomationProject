@@ -13,6 +13,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import com.AutomateWithAnuj.modules.PayloadManager;
+import org.testng.annotations.Test;
 
 public class BaseTest {
     // CommonToAll Testcase
@@ -40,6 +41,16 @@ public class BaseTest {
                 .setBaseUri(APIConstants.BASE_URL)
                 .addHeader("Content-Type","application/json")
                 .build().log().all();
+    }
+
+    public String getToken(){
+        requestSpecification = RestAssured.given();
+        requestSpecification.baseUri(APIConstants.BASE_URL)
+            .basePath(APIConstants.AUTH_URL);
+        String payload = payloadManager.setAuthPayload();
+        response = (Response) requestSpecification.contentType(ContentType.JSON).body(payload).post();
+        String token = payloadManager.getTokenResponseString(response.asString());
+        return token;
     }
 
     @AfterTest
