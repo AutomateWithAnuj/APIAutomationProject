@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/anujr/IdeaProjects/APIAutomationProject">
+        <classes>
+            <class name="com.AutomateWithAnuj.tests.e2e_Integerations.TestIntegerationFlow1">
+            </class>
+        </classes>
+    </test>
+</suite>

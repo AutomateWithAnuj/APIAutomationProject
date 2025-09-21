@@ -131,5 +131,4 @@ public class TestIntegerationFlow1 extends BaseTest {
         validatableResponse = RestAssured.given(requestSpecification).when().delete().then().log().all();
         validatableResponse.statusCode(201);
     }
-
 }
